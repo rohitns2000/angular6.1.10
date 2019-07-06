@@ -1,0 +1,100 @@
+<!---Employee id is {{empId}}<br/>
+Employee Name is {{empName}}<br/>
+Employee Salary is {{empSalary}}<br/>
+
+<input type="button" value="ADD DATA" ()="addEmployee()" />--->
+
+<form>
+        <table>
+                <tr>
+                        <td>Product ID</td>
+                        <td><input type="number" [(ngModel)]="prodId"/></td>
+                </tr>
+        
+                <tr>
+                        <td>Product Name</td>
+                        <td><input type="text" [(ngModel)]="prodName"/></td>
+                </tr>
+        
+                <tr>
+                        <td>Product Cost</td>
+                        <td><input type="text" [(ngModel)]="prodCost"/></td>
+                </tr>
+
+                <tr>
+                        <td>Product Online</td>
+                        <td>
+                                <input type="radio" ng-control="options" [value]="Yes" name="options" [(ngModel)]="model.options" [ngModelOptions]="{standalone: true}">Yes
+                                <input type="radio" ng-control="options" [value]="No" name="options" [(ngModel)]="model.options" [ngModelOptions]="{standalone: true}">No
+                        </td>
+                </tr>
+
+                <tr>
+                         <td>Product Category</td>
+                         <td>
+                                <select name="pref">
+                                        <option value="Grocery" [(ngModel)]="prodCategory">Grocery </option>
+                                        <option value="Mobile" [(ngModel)]="prodCategory">Mobile </option>
+                                        <option value="Electronics&Clothes" [(ngModel)]="prodCategory">Electronics&Clothes </option>
+                                </select>
+                        </td>
+                </tr>
+                
+                <tr>
+                        <td>Available in Store</td>
+                        <td>
+                                <input type="checkbox" [(ngModel)]="prodStore"/>BigBazar
+                                <input type="checkbox" [(ngModel)]="prodStore"/>DMart
+                                <input type="checkbox" [(ngModel)]="prodStore"/>Reliance
+                                <input type="checkbox" [(ngModel)]="prodStore"/>Mega Store
+                        </td>
+                        </tr>
+
+                
+        
+                <tr>
+                        <td><input type="button" value="Add Product" (click)="addProduct()" /></td>
+                </tr>
+        </table>
+</form>
+
+    <!-- <h2>Show All Employee</h2>
+
+    <table border="1">
+        <tr>
+            <th>EmployeeId</th>
+            <th>Employee Name</th>
+            <th>Employee Salary</th>
+        </tr>
+
+        <tr *ngFor="let data of empAll;let i=index" >
+            <td>{{data.empId}}</td>
+            <td>{{data.empName}}</td>
+            <td>{{data.empSalary}}</td>
+            <td><input type="button" value="DELETE" (click)="deleteEmployee(i)"/></td>
+            <td><input type="button" value="UPDATE" (click)="toUpdateEmployee(i)"/></td>
+        </tr>
+    </table>
+    <br/>
+
+    <h3>Update Employee</h3>
+    <table>
+        <tr>
+                <td>Employee ID</td>
+                <td><input type="text" [(ngModel)]="empId1"/></td>
+        </tr>
+    
+        <tr>
+                <td>Employee Name</td>
+                <td><input type="text" [(ngModel)]="empName1"/></td>
+        </tr>
+    
+        <tr>
+                <td>Employee Salary</td>
+                <td><input type="text" [(ngModel)]="empSalary1"/></td>
+        </tr>
+    
+        <tr>
+                <td><input type="button" value="Update" (click)="updateEmployee()" /></td>
+        </tr>
+    </table> -->
